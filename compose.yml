@@ -1,0 +1,23 @@
+services:
+  redis:
+    image: redis
+    ports:
+      - '6379:6379'
+    restart: always
+
+  bot:
+    build:
+      context: ./bot
+    depends_on:
+      - redis
+    ports:
+      - '80:80'
+    environment:
+      - BOT_TOKEN=7484139398:AAHwFUGUDOSo8iw3E7W27lbVeCCD581xb7M
+      - SUPPORT_CONTACT=https://t.me/kostantina_1
+      - ADMIN_ID=1822489245
+      - LINK_DOMAIN=https://t.me/TGGame1337Bot
+      - POSTBACK_URL=http://185.190.250.47/69dd446/postback?
+      - WD_BOT_TOKEN=7243393698:AAF9aElO9QWAZqcSoRyXaht5GRfMqn8diJ4
+      - WEBHOOK_URL=birdsfarm.xyz
+    restart: always

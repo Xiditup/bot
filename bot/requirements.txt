@@ -1,0 +1,6 @@
+aiogram
+redis
+babel
+httpx
+fastapi
+uvicorn

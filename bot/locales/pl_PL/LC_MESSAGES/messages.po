@@ -1,0 +1,446 @@
+# Polish (Poland) translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-06-21 12:31+0300\n"
+"PO-Revision-Date: 2024-06-21 17:27+0300\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: pl_PL\n"
+"Language-Team: pl_PL <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && "
+"(n%100<10 || n%100>=20) ? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.13.1\n"
+
+#: routers/account.py:18
+msgid "share my link"
+msgstr "Uzyskaj mój link zaproszenia🔗"
+
+#: routers/account.py:18
+msgid "share this: {link}"
+msgstr "<b>UDOSTĘPNIJ TO:</b> {link}"
+
+#: routers/account.py:21
+msgid "top up balance"
+msgstr "Kup srebro🪙"
+
+#: routers/account.py:22 routers/birds.py:37 routers/info.py:13
+msgid "btn back to main"
+msgstr "🏠 Menu główne"
+
+#: routers/account.py:25
+msgid "account {balance} {referrals}"
+msgstr ""
+"👤Informacje o Twoim koncie:\n"
+"\n"
+"Twoje srebro: {balance}🪙\n"
+"\n"
+"Zaproszeni ludzie: {referrals}"
+
+#: routers/account.py:43
+msgid "topup info"
+msgstr "Tutaj możesz kupić srebro za Telegram Stars⭐️"
+
+#: routers/account.py:45
+msgid "pay 50"
+msgstr "6500🪙 za 50⭐️"
+
+#: routers/account.py:46
+msgid "pay 100"
+msgstr "13000🪙 za 100⭐️"
+
+#: routers/account.py:47
+msgid "pay 500"
+msgstr "65000🪙 za 500⭐️"
+
+#: routers/account.py:48
+msgid "pay 1000"
+msgstr "130000🪙 za 1000⭐️"
+
+#: routers/account.py:49
+msgid "back to account"
+msgstr "⬅️ Menu konta"
+
+#: routers/account.py:55
+msgid "invoice 50 title"
+msgstr "6500🪙"
+
+#: routers/account.py:56
+msgid "invoice 100 title"
+msgstr "13000🪙"
+
+#: routers/account.py:57
+msgid "invoice 500 title"
+msgstr "65000🪙"
+
+#: routers/account.py:58
+msgid "invoice 1000 title"
+msgstr "130000🪙"
+
+#: routers/account.py:63
+msgid "invoice description"
+msgstr "Srebro za gwiazdy"
+
+#: routers/account.py:71
+msgid "send payment"
+msgstr "Zapłać✅"
+
+#: routers/account.py:72
+msgid "cancel invoice"
+msgstr "Anuluj❌"
+
+#: routers/birds.py:14
+msgid "birds menu {eggs}"
+msgstr ""
+"To jest twoja farma\n"
+"\n"
+"Wyprodukowane jajka w tym momencie: {eggs}\n"
+"\n"
+"Wybierz kolor ptaka, aby dowiedzieć się więcej i dokonać zakupu\n"
+"\n"
+"*Naciśnij «Zbierz», aby zebrać jajka i zamienić je na srebro\n"
+"\n"
+"Informacje o ptakach:"
+
+#: routers/birds.py:16
+msgid "bird 1 {amount} {balance}"
+msgstr "🔵 [{amount}] → {balance}🥚"
+
+#: routers/birds.py:20
+msgid "bird 2 {amount} {balance}"
+msgstr "🟢 [{amount}] → {balance}🥚"
+
+#: routers/birds.py:24
+msgid "bird 3 {amount} {balance}"
+msgstr "🟡 [{amount}] → {balance}🥚"
+
+#: routers/birds.py:28
+msgid "bird 4 {amount} {balance}"
+msgstr "🟠 [{amount}] → {balance}🥚"
+
+#: routers/birds.py:32
+msgid "bird 5 {amount} {balance}"
+msgstr "🔴 [{amount}] → {balance}🥚"
+
+#: routers/birds.py:36
+msgid "collect"
+msgstr "Zbierz jajka 🥚→🪙"
+
+#: routers/birds.py:47
+msgid "eggs collected"
+msgstr "Jajka zebrane!"
+
+#: routers/birds.py:53
+msgid "bird 1 {amount}"
+msgstr ""
+"To jest Niebieski Ptak.\n"
+"\n"
+"Twój pierwszy ptak🐣\n"
+"\n"
+"Koszt: 100🪙\n"
+"\n"
+"Produkcja: 10🥚 / godzina\n"
+"\n"
+"Masz: {amount}"
+
+#: routers/birds.py:54
+msgid "bird 2 {amount}"
+msgstr ""
+"To jest Zielony Ptak.\n"
+"\n"
+"Jeśli masz jeden, wiesz coś o rolnictwie😎\n"
+"\n"
+"Koszt: 300🪙\n"
+"\n"
+"Produkcja: 50🥚 / godzina\n"
+"\n"
+"Masz: {amount}"
+
+#: routers/birds.py:55
+msgid "bird 3 {amount}"
+msgstr ""
+"To jest Żółty Ptak.\n"
+"\n"
+"Ktoś bierze to na poważnie, co?😏\n"
+"\n"
+"Koszt: 1000🪙\n"
+"\n"
+"Produkcja: 100🥚 / godzina\n"
+"\n"
+"Masz: {amount}"
+
+#: routers/birds.py:56
+msgid "bird 4 {amount}"
+msgstr ""
+"To jest Pomarańczowy Ptak.\n"
+"\n"
+"Gdzie umieścić wszystkie te jajka?🤯\n"
+"\n"
+"Koszt: 3000🪙\n"
+"\n"
+"Produkcja: 200🥚 / godzina\n"
+"\n"
+"Masz: {amount}"
+
+#: routers/birds.py:57
+msgid "bird 5 {amount}"
+msgstr ""
+"To jest Czerwony Ptak.\n"
+"\n"
+"Jesteś w 100% blisko szczytu📊\n"
+"\n"
+"Koszt: 10000🪙\n"
+"\n"
+"Produkcja: 500🥚 / godzina\n"
+"\n"
+"Masz: {amount}"
+
+#: routers/birds.py:62
+msgid "buy"
+msgstr "Kup🛒"
+
+#: routers/birds.py:63
+msgid "btn back to birds"
+msgstr "⬅️ Powrót na farmę"
+
+#: routers/birds.py:75
+msgid "Buy success"
+msgstr "Zakupiono!"
+
+#: routers/birds.py:78
+msgid "Insufficient balance"
+msgstr "Niewystarczająca ilość srebra :("
+
+#: routers/head.py:16
+msgid "btn info"
+msgstr "💬 Informacje"
+
+#: routers/head.py:17
+msgid "btn birds"
+msgstr "🪺 Twoja farma"
+
+#: routers/head.py:18
+msgid "btn account"
+msgstr "👤 Konto"
+
+#: routers/head.py:19
+msgid "btn withdrawal"
+msgstr "💸 Wypłata"
+
+#: routers/head.py:20
+msgid "btn support"
+msgstr "🤝 Wsparcie"
+
+#: routers/head.py:24
+msgid "welcome {name}"
+msgstr ""
+"Witamy, {name}!\n"
+"\n"
+"Gra jest bardzo prosta:\n"
+"-kupuj ptaki\n"
+"-zbieraj jajka\n"
+"-powtarzaj\n"
+"*i wypłacaj pieniądze, kiedy tylko chcesz😁"
+
+#: routers/head.py:29
+msgid "main menu"
+msgstr ""
+"Menu główne\n"
+"\n"
+"Ile jajek zbierzesz dzisiaj❓"
+
+#: routers/info.py:11
+msgid "info"
+msgstr ""
+"Aby kupić ptaki i zbierać jajka, naciśnij «twoja farma»\n"
+"\n"
+"Aby uzyskać informacje o koncie i link do zaproszeń, naciśnij «konto»\n"
+"\n"
+"Jeśli chcesz wymienić srebro na prawdziwe pieniądze, naciśnij «wypłata»\n"
+"\n"
+"Jeśli masz jakieś pytania - «wsparcie»"
+
+#: routers/withdrawal.py:24
+msgid "to fw 0.1$"
+msgstr "WYPŁAĆ!"
+
+#: routers/withdrawal.py:25 routers/withdrawal.py:40
+msgid "to main menu"
+msgstr "🏠 Menu główne"
+
+#: routers/withdrawal.py:29 routers/withdrawal.py:33
+msgid "fw menu {silver}"
+msgstr ""
+"Masz {silver}🪙\n"
+"\n"
+"Kurs wymiany: 1000🪙 = 0.1$"
+
+#: routers/withdrawal.py:39
+msgid "to wd"
+msgstr "wypłata"
+
+#: routers/withdrawal.py:44 routers/withdrawal.py:48
+msgid "wd menu {silver}"
+msgstr ""
+"Masz {silver}🪙\n"
+"\n"
+"Kurs wymiany: 1000🪙 = 0.1$"
+
+#: routers/withdrawal.py:62
+msgid "fw available {silver}"
+msgstr ""
+"✅Wypłata dostępna\n"
+"\n"
+"{silver}/1000\n"
+"\n"
+"Przejdź dalej, aby uzyskać swoje 0.1$!"
+
+#: routers/withdrawal.py:64
+msgid "request fw"
+msgstr "Żądanie wypłaty🙋‍♂️"
+
+#: routers/withdrawal.py:65 routers/withdrawal.py:70
+msgid "to wd menu"
+msgstr "⬅️ powrót"
+
+#: routers/withdrawal.py:68
+msgid "not available fw {silver}"
+msgstr ""
+"❌ Wypłata niedostępna\n"
+"\n"
+"Twoje srebro: {silver} / 1000\n"
+"\n"
+"Zarabiaj więcej i wróć!"
+
+#: routers/withdrawal.py:76
+msgid ""
+"ask TON addr (WARNING: YOU MUST ENTER CORRECT DATA. IF MISTAKE OCCURED, "
+"CONTACT SUPPORT IMMEDIATELY!!!)"
+msgstr ""
+"Wprowadź adres swojego portfela TON-coin.\n"
+"\n"
+"MUSISZ WPROWADZIĆ PRAWIDŁOWE DANE!\n"
+"SPRAWDŹ DWA RAZY!\n"
+"\n"
+"W przypadku jakiejkolwiek pomyłki natychmiast skontaktuj się z pomocą techniczną!"
+
+#: routers/withdrawal.py:78
+msgid "cancel fw"
+msgstr "Anuluj wypłatę❌"
+
+#: routers/withdrawal.py:99
+msgid "fw money will arrive in next 24h."
+msgstr ""
+"Świetnie!\n"
+"\n"
+"Pieniądze dotrą w ciągu następnych 24 godzin!\n"
+"\n"
+"Teraz jest czas, aby rozbudować swoją farmę!"
+
+#: routers/withdrawal.py:106
+msgid "request"
+msgstr "Kontynuuj"
+
+#: routers/withdrawal.py:107
+msgid "gold"
+msgstr "Złote monety🏆"
+
+#: routers/withdrawal.py:108
+msgid "wd to menu"
+msgstr "⬅️ powrót"
+
+#: routers/withdrawal.py:110
+msgid "wd menu {silver} {gold} {available}"
+msgstr ""
+"Twoje saldo:\n"
+"\n"
+"{silver}🪙\n"
+"\n"
+"{gold}🏆\n"
+"\n"
+"Dostępne do wypłaty: {available}$"
+
+#: routers/withdrawal.py:137
+msgid "gold menu promt {gold}"
+msgstr ""
+"Masz {gold}🏆\n"
+"\n"
+"Potrzebujesz złota, aby dokonywać wypłat!\n"
+"\n"
+"Otrzymujesz złoto, gdy:\n"
+"-kupujesz srebro🪙 za Telegram Stars⭐️\n"
+"-osoby, które zaprosiłeś, kupują srebro🪙 za Telegram Stars⭐️\n"
+"-wykonujesz zadania\n"
+"\n"
+"*kliknij «szczegóły», aby dowiedzieć się więcej"
+
+#: routers/withdrawal.py:139
+msgid "gold details"
+msgstr "Szczegóły"
+
+#: routers/withdrawal.py:140
+msgid "to tasks"
+msgstr "Zadania"
+
+#: routers/withdrawal.py:141
+msgid "back from gold menu to wd menu"
+msgstr "⬅️ powrót"
+
+#: routers/withdrawal.py:146
+msgid "gold details promt, table, etc."
+msgstr ""
+"1🏆 równa się 0.01$\n"
+"\n"
+"Kiedy kupujesz 🪙 za ⭐️ otrzymujesz:\n"
+"- 26🏆 za 50⭐️\n"
+"- 52🏆 za 100⭐️\n"
+"- 260🏆 za 500⭐️\n"
+"- 540🏆 za 1000⭐️\n"
+"\n"
+"Kiedy osoby, które zaprosiłeś, kupują, otrzymujesz:\n"
+"- 3🏆 za 50⭐️\n"
+"- 6🏆 za 50⭐️\n"
+"- 32🏆 za 50⭐️\n"
+"- 67🏆 za 50⭐️\n"
+"\n"
+"Uzyskaj swój link zaproszenia w menu «konto»!"
+
+#: routers/withdrawal.py:148
+msgid "back from gold details to gold menu"
+msgstr "⬅️ powrót"
+
+#: routers/withdrawal.py:154
+msgid "Currently there are NO tasks :("
+msgstr "Obecnie nie ma zadań :\\"
+
+#: routers/withdrawal.py:165
+msgid "ask amount to wd. available: {available}"
+msgstr "Wprowadź kwotę wypłaty (z {available}):"
+
+#: routers/withdrawal.py:167
+msgid "cancel wd"
+msgstr "Anuluj wypłatę❌"
+
+#: routers/withdrawal.py:199
+msgid "ask ton addr to wd"
+msgstr ""
+"Wprowadź adres swojego portfela TON-coin.\n"
+"\n"
+"MUSISZ WPROWADZIĆ PRAWIDŁOWE DANE!\n"
+"SPRAWDŹ DWA RAZY!\n"
+"\n"
+"W przypadku jakiejkolwiek pomyłki natychmiast skontaktuj się z pomocą techniczną!"
+
+#: routers/withdrawal.py:216
+msgid "Withdrawal request sucess promt (manager, support, 24h, etc)"
+msgstr ""
+"Świetnie!\n"
+"\n"
+"Pieniądze dotrą w ciągu następnych 24 godzin!"
