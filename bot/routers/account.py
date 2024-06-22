@@ -21,7 +21,7 @@ async def menu(cbq: CallbackQuery | Message):
             [InlineKeyboardButton(text=_('top up balance'), callback_data='topup')],
             [InlineKeyboardButton(text=_('btn back to main'), callback_data='main')]
         ]
-    file = FSInputFile(path='/app/static/account.jpg')
+    file = dbp.get_photoid('account')
     text = _('account {balance} {referrals}').format(
                 balance=balance,
                 referrals=referrals
@@ -39,7 +39,7 @@ async def account_menu(cbq: CallbackQuery):
 
 @account.callback_query(F.data == 'topup')
 async def topup(cbq: CallbackQuery):
-    await cbq.message.edit_media(InputMediaPhoto(media=FSInputFile(path='/app/static/topup.jpg'),
+    await cbq.message.edit_media(InputMediaPhoto(media=dbp.get_photoid('topup'),
                                                  caption=_('topup info')),
                                 reply_markup=InlineKeyboardMarkup(inline_keyboard=[
                                     [InlineKeyboardButton(text=_('pay 50'), callback_data='pay-50')],

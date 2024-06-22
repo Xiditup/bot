@@ -1,5 +1,9 @@
+import logging
+
 from aiogram import Router
 from aiogram.types import Message
+
+logging.basicConfig()
 
 tail = Router()
 

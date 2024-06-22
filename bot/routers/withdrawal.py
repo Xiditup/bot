@@ -1,4 +1,5 @@
 from os import getenv
+import logging
 import asyncio
 from aiogram import Bot, Router, F
 from aiogram.types import Message, CallbackQuery, InputMediaPhoto, FSInputFile, InlineKeyboardMarkup, InlineKeyboardButton, LabeledPrice, PreCheckoutQuery
@@ -7,6 +8,8 @@ from aiogram.utils.i18n import gettext as _
 from aiogram.fsm.state import StatesGroup, State
 from aiogram.fsm.context import FSMContext
 from storage import DatabaseProcessor
+
+logging.basicConfig()
 
 bot = Bot(token=getenv('BOT_TOKEN'))
 withdrawal_operator_bot = Bot(token=getenv('WD_BOT_TOKEN'))
@@ -25,11 +28,11 @@ async def first_menu(cbq: CallbackQuery, answer=False):
             [InlineKeyboardButton(text=_('to main menu'), callback_data='main')]
         ]
     if answer:
-        await cbq.message.answer_photo(photo=FSInputFile(path='/app/static/withdrawal.jpg'),
+        await cbq.message.answer_photo(photo=dbp.get_photoid('withdrawal'),
                                  caption=_('fw menu {silver}').format(silver=silver),
                                  reply_markup=InlineKeyboardMarkup(inline_keyboard=keyboard))
     else:
-        await cbq.message.edit_media(media=InputMediaPhoto(media=FSInputFile(path='/app/static/withdrawal.jpg'),
+        await cbq.message.edit_media(media=InputMediaPhoto(media=dbp.get_photoid('withdrawal'),
                                                         caption=_('fw menu {silver}').format(silver=silver)),
                                     reply_markup=InlineKeyboardMarkup(inline_keyboard=keyboard))
 
@@ -40,11 +43,11 @@ async def menu(cbq: CallbackQuery | Message):
                 [InlineKeyboardButton(text=_('to main menu'), callback_data='main')]
         ]
     if isinstance(cbq, CallbackQuery):
-        await cbq.message.edit_media(media=InputMediaPhoto(media=FSInputFile(path='/app/static/withdrawal.jpg'),
+        await cbq.message.edit_media(media=InputMediaPhoto(media=dbp.get_photoid('withdrawal'),
                                                         caption=_('wd menu {silver}').format(silver=silver)),
                                     reply_markup=InlineKeyboardMarkup(inline_keyboard=keyboard))
     else:
-        await cbq.answer_photo(photo=FSInputFile(path='/app/static/withdrawal.jpg'),
+        await cbq.answer_photo(photo=dbp.get_photoid('withdrawal'),
                                caption=_('wd menu {silver}').format(silver=silver),
                                reply_markup=InlineKeyboardMarkup(inline_keyboard=keyboard))
 
@@ -118,12 +121,12 @@ async def wd_menu(cbq: CallbackQuery | Message, answer=False):
                                             reply_markup=InlineKeyboardMarkup(inline_keyboard=keyboard)
                                 )
         else:
-            await cbq.message.answer_photo(photo=FSInputFile(path='/app/static/withdrawal.jpg'),
+            await cbq.message.answer_photo(photo=dbp.get_photoid('withdrawal'),
                                            caption=text,
                                            reply_markup=InlineKeyboardMarkup(inline_keyboard=keyboard))
     else:
         if answer:
-            await cbq.answer_photo(photo=FSInputFile(path='/app/static/withdrawal.jpg'),
+            await cbq.answer_photo(photo=dbp.get_photoid('withdrawal'),
                                            caption=text,
                                            reply_markup=InlineKeyboardMarkup(inline_keyboard=keyboard))
 

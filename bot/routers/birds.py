@@ -1,8 +1,11 @@
+import logging
 from aiogram import Router, F
 from aiogram.types import CallbackQuery, InputMediaPhoto, FSInputFile, InlineKeyboardMarkup, InlineKeyboardButton
 from aiogram.utils.i18n import gettext as _
 from storage import DatabaseProcessor
 from misc.models import source_panel
+
+logging.basicConfig()
 
 birds = Router()
 
@@ -10,7 +13,7 @@ dbp = DatabaseProcessor()
 
 async def menu(cbq: CallbackQuery):
     eggs, amounts, balances = dbp.get_eab(cbq.from_user.id)
-    await cbq.message.edit_media(media=InputMediaPhoto(media=FSInputFile(path='/app/static/birds.jpg'),
+    await cbq.message.edit_media(media=InputMediaPhoto(media=dbp.get_photoid('birds'),
                                                        caption=_('birds menu {eggs}').format(eggs=eggs)),
                                 reply_markup=InlineKeyboardMarkup(inline_keyboard=[
                                     [InlineKeyboardButton(text=_('bird 1 {amount} {balance}').format(
@@ -56,7 +59,7 @@ async def bird(cbq: CallbackQuery, id: int):
         _('bird 4 {amount}').format(amount=amount),
         _('bird 5 {amount}').format(amount=amount)
     ][id]
-    await cbq.message.edit_media(InputMediaPhoto(media=FSInputFile(path=f'/app/static/{id}.jpg'),
+    await cbq.message.edit_media(InputMediaPhoto(media=dbp.get_photoid(f'{id}'),
                                                  caption=text),
                                 reply_markup=InlineKeyboardMarkup(inline_keyboard=[
                                     [InlineKeyboardButton(text=_('buy'), callback_data=f'buy-{id}')],

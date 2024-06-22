@@ -1,9 +1,12 @@
 from os import getenv
+import logging
 from aiogram import Bot, Router, F, html
 from aiogram.filters import CommandStart, Command
 from aiogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, ReactionTypeEmoji, FSInputFile, InputMediaPhoto, CallbackQuery, SwitchInlineQueryChosenChat
 from aiogram.utils.i18n import gettext as _
 from storage import DatabaseProcessor
+
+logging.basicConfig()
 
 head = Router()
 
@@ -22,20 +25,33 @@ async def menu(msg: Message | CallbackQuery, welcome=False):
                                [InlineKeyboardButton(text=_('btn support'), url=getenv('SUPPORT_CONTACT'))]
                            ])
     if welcome:
-        await msg.answer_photo(photo=FSInputFile(path='/app/static/main.jpg'),
-                            caption=_('welcome {name}').format(name=msg.from_user.full_name),
-                            reply_markup=markup
-                            )
+        await msg.answer(text='Choose your language:\n\nWybierz swój język:\n\nΕπιλέξτε τη γλώσσα σας:',
+                         reply_markup=InlineKeyboardMarkup(inline_keyboard=[
+                             [InlineKeyboardButton(text='English language', callback_data='setlang-en')],
+                             [InlineKeyboardButton(text='Język polski', callback_data='setlang-pl_PL')],
+                             [InlineKeyboardButton(text='Ελληνική γλώσσα', callback_data='setlang-el_GR')]
+                         ]))
+        #await msg.answer_photo(photo=dbp.get_photoid('main'),
+                            #caption=_('welcome {name}').format(name=msg.from_user.full_name),
+                            #reply_markup=markup
+                            #)
     else:
         try:
             await msg.edit_media(media=InputMediaPhoto(media=dbp.get_photoid('main'),
                                                     caption=_('main menu')),
                                 reply_markup=markup)
         except:
-            await msg.answer_photo(photo=FSInputFile(path='/app/static/main.jpg'),
+            await msg.answer_photo(photo=dbp.get_photoid('main'),
                                 caption=_('main menu'),
                                 reply_markup=markup
                             )
+            
+@head.callback_query(F.data.startswith('setlang-'))
+async def setlang(cbq: CallbackQuery):
+    language_code = cbq.data.split('-')[-1]
+    dbp.update_language_code(cbq.from_user.id, language_code)
+    await cbq.message.delete()
+    await menu(cbq)
 
 @head.message(CommandStart())
 async def start(msg: Message):
@@ -56,6 +72,7 @@ async def get_main_menu(msg: Message):
                                   msg.message_id - 1,
                                   msg.message_id - 2
                               ])
+
 
 @head.callback_query(F.data == 'main')
 async def main_menu(cbq: CallbackQuery):

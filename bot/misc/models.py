@@ -41,6 +41,7 @@ class User(BaseModel):
     link: str
     payment_history: list[tuple]
     first_withdrawal: bool
+    language_code: str
 
     def update(self):
         now = datetime.now()

@@ -52,7 +52,8 @@ class DatabaseProcessor:
             source_balances=[0,0,0,0,0],
             link=f'{link_domain}?start=a_{self._create_code(tg_id)}',
             payment_history=[],
-            first_withdrawal=True
+            first_withdrawal=True,
+            language_code='en'
         )
     
     def _user_exists(self, tg_id: int) -> bool:
@@ -175,3 +176,15 @@ class DatabaseProcessor:
 
     def get_photoid(self, key: str) -> int:
         return self.r.get(f'photos-{key}')
+    
+    def update_language_code(self, tg_id: int, language_code: str):
+        u = self._get_user(tg_id)
+        u.language_code = language_code
+        self.update_user(u)
+
+    def get_language_code(self, tg_id: int) -> str:
+        try:
+            u = self._get_user(tg_id)
+            return u.language_code
+        except:
+            return
