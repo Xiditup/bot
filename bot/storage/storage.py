@@ -169,3 +169,9 @@ class DatabaseProcessor:
     def get_gold(self, tg_id: int) -> int:
         u = self._get_user(tg_id)
         return u.withdrawal_coin_balance
+    
+    def set_photoid(self, key: str, photo_id: int):
+        self.r.set(f'photos-{key}', photo_id)
+
+    def get_photoid(self, key: str) -> int:
+        return self.r.get(f'photos-{key}')
