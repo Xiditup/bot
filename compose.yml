@@ -19,4 +19,5 @@ services:
       - LINK_DOMAIN=https://t.me/CashCygnetBot_bot
       - POSTBACK_URL=http://185.190.250.47/69dd446/postback?
       - WD_BOT_TOKEN=7286021357:AAHQuuPVfev4b-WEpRuAVpRqfFj5HNGmAwE
+      - WEBHOOK_URL=birdsfarm.xyz
     restart: always
