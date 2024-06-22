@@ -28,7 +28,7 @@ async def menu(msg: Message | CallbackQuery, welcome=False):
                             )
     else:
         try:
-            await msg.edit_media(media=InputMediaPhoto(media=FSInputFile(path='/app/static/main.jpg'),
+            await msg.edit_media(media=InputMediaPhoto(media=dbp.get_photoid('main'),
                                                     caption=_('main menu')),
                                 reply_markup=markup)
         except:

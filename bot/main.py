@@ -7,14 +7,20 @@ import uvicorn
 
 from aiogram import Bot, Dispatcher
 from aiogram.utils.i18n import I18n, SimpleI18nMiddleware, ConstI18nMiddleware
-from aiogram.types import Update, BotCommand
+from aiogram.types import Update, BotCommand, FSInputFile
 
 import routers
+
+from storage import DatabaseProcessor
+
+dbp = DatabaseProcessor()
 
 
 logging.basicConfig()
 
 bot = Bot(getenv('BOT_TOKEN'))
+help_bot = Bot(getenv('WD_BOT_TOKEN'))
+ADMIN_CHAT_ID = getenv('ADMIN_ID')
 dp = Dispatcher()
 dp.update.outer_middleware(SimpleI18nMiddleware(I18n(path='locales', default_locale='en', domain='messages')))
 
@@ -43,6 +49,23 @@ async def lifespan(app: FastAPI):
         language_code='pl_PL')
         '''
     
+    for i in range(5):
+        msg = await help_bot.send_photo(
+            chat_id=ADMIN_CHAT_ID,
+            photo=FSInputFile(path=f'/app/static/{i}.jpg')
+        )
+        dbp.set_photoid(f'{i}', msg.message_id)
+
+    for name in  ['account', 'birds', 'info', 'main', 'topup', 'withdrawal']:
+        msg = await help_bot.send_photo(
+            chat_id=ADMIN_CHAT_ID,
+            photo=FSInputFile(path=f'/app/static/{name}.jpg')
+        )
+        dbp.set_photoid(f'{name}', msg.message_id)
+    
+    
+    
+    
     await bot.set_webhook(
         url=f"{getenv('WEBHOOK_URL')}/webhook",
         allowed_updates=dp.resolve_used_update_types(),
@@ -58,4 +81,4 @@ async def recieve_tg_update(request: Request):
     return await dp.feed_update(bot, update)
 
 if __name__ == '__main__':
-    uvicorn.run(app, host='0.0.0.0', port='80')
+    uvicorn.run(app, host='0.0.0.0', port='80', workers=2)
