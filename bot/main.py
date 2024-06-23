@@ -41,13 +41,6 @@ dp.include_router(routers.birds)
 dp.include_router(routers.withdrawal)
 dp.include_router(routers.tail)
     
-
-    #session = await bot.session()
-    #await session.close()
-
-    
-    #await bot.refund_star_payment(1822489245, 'F7382327781502197760U1822489245B7243393698A50m237479')
-
 async def lifespan(app: FastAPI):
     for i in range(5):
         msg = await bot.send_photo(
@@ -76,5 +69,24 @@ async def recieve_tg_update(request: Request):
     update = Update.model_validate(await request.json(), context={"bot": bot})
     return await dp.feed_update(bot, update)
 
+'''
+async def main():
+    for i in range(5):
+        msg = await bot.send_photo(
+            chat_id=ADMIN_CHAT_ID,
+            photo=FSInputFile(path=f'/app/static/{i}.jpg')
+        )
+        dbp.set_photoid(f'{i}', msg.photo[-1].file_id)
+
+    for name in  ['account', 'birds', 'info', 'main', 'topup', 'withdrawal']:
+        msg = await bot.send_photo(
+            chat_id=ADMIN_CHAT_ID,
+            photo=FSInputFile(path=f'/app/static/{name}.jpg'),
+        )
+        dbp.set_photoid(f'{name}', msg.photo[-1].file_id)
+    await bot.delete_webhook(drop_pending_updates=True)
+    await dp.start_polling(bot)
+    '''
 if __name__ == '__main__':
     uvicorn.run(app, host='0.0.0.0', port='80')
+    #asyncio.run(main())

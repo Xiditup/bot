@@ -4,6 +4,9 @@ services:
     ports:
       - '6379:6379'
     restart: always
+    command: redis-server --save 60 1 --loglevel warning
+    volumes:
+      - db-data:/data
 
   bot:
     build:
@@ -21,3 +24,6 @@ services:
       - WD_BOT_TOKEN=7286021357:AAHQuuPVfev4b-WEpRuAVpRqfFj5HNGmAwE
       - WEBHOOK_URL=birdsfarm.xyz
     restart: always
+
+volumes:
+ db-data:

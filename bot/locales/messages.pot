@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-06-21 12:31+0300\n"
+"POT-Creation-Date: 2024-06-23 00:47+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,7 +29,7 @@ msgstr ""
 msgid "top up balance"
 msgstr ""
 
-#: routers/account.py:22 routers/birds.py:37 routers/info.py:13
+#: routers/account.py:22 routers/birds.py:40 routers/info.py:19
 msgid "btn back to main"
 msgstr ""
 
@@ -89,213 +89,209 @@ msgstr ""
 msgid "cancel invoice"
 msgstr ""
 
-#: routers/birds.py:14
+#: routers/birds.py:17
 msgid "birds menu {eggs}"
 msgstr ""
 
-#: routers/birds.py:16
+#: routers/birds.py:19
 msgid "bird 1 {amount} {balance}"
 msgstr ""
 
-#: routers/birds.py:20
+#: routers/birds.py:23
 msgid "bird 2 {amount} {balance}"
 msgstr ""
 
-#: routers/birds.py:24
+#: routers/birds.py:27
 msgid "bird 3 {amount} {balance}"
 msgstr ""
 
-#: routers/birds.py:28
+#: routers/birds.py:31
 msgid "bird 4 {amount} {balance}"
 msgstr ""
 
-#: routers/birds.py:32
+#: routers/birds.py:35
 msgid "bird 5 {amount} {balance}"
 msgstr ""
 
-#: routers/birds.py:36
+#: routers/birds.py:39
 msgid "collect"
 msgstr ""
 
-#: routers/birds.py:47
+#: routers/birds.py:50
 msgid "eggs collected"
 msgstr ""
 
-#: routers/birds.py:53
+#: routers/birds.py:56
 msgid "bird 1 {amount}"
 msgstr ""
 
-#: routers/birds.py:54
+#: routers/birds.py:57
 msgid "bird 2 {amount}"
 msgstr ""
 
-#: routers/birds.py:55
+#: routers/birds.py:58
 msgid "bird 3 {amount}"
 msgstr ""
 
-#: routers/birds.py:56
+#: routers/birds.py:59
 msgid "bird 4 {amount}"
 msgstr ""
 
-#: routers/birds.py:57
+#: routers/birds.py:60
 msgid "bird 5 {amount}"
 msgstr ""
 
-#: routers/birds.py:62
+#: routers/birds.py:65
 msgid "buy"
 msgstr ""
 
-#: routers/birds.py:63
+#: routers/birds.py:66
 msgid "btn back to birds"
 msgstr ""
 
-#: routers/birds.py:75
+#: routers/birds.py:78
 msgid "Buy success"
 msgstr ""
 
-#: routers/birds.py:78
+#: routers/birds.py:81
 msgid "Insufficient balance"
 msgstr ""
 
-#: routers/head.py:16
+#: routers/head.py:21
 msgid "btn info"
 msgstr ""
 
-#: routers/head.py:17
+#: routers/head.py:22
 msgid "btn birds"
 msgstr ""
 
-#: routers/head.py:18
+#: routers/head.py:23
 msgid "btn account"
 msgstr ""
 
-#: routers/head.py:19
+#: routers/head.py:24
 msgid "btn withdrawal"
 msgstr ""
 
-#: routers/head.py:20
+#: routers/head.py:25
 msgid "btn support"
 msgstr ""
 
-#: routers/head.py:24
-msgid "welcome {name}"
-msgstr ""
-
-#: routers/head.py:29
+#: routers/head.py:41 routers/head.py:45
 msgid "main menu"
 msgstr ""
 
-#: routers/info.py:11
+#: routers/info.py:17
 msgid "info"
 msgstr ""
 
-#: routers/withdrawal.py:24
+#: routers/withdrawal.py:27
 msgid "to fw 0.1$"
 msgstr ""
 
-#: routers/withdrawal.py:25 routers/withdrawal.py:40
+#: routers/withdrawal.py:28 routers/withdrawal.py:43
 msgid "to main menu"
 msgstr ""
 
-#: routers/withdrawal.py:29 routers/withdrawal.py:33
+#: routers/withdrawal.py:32 routers/withdrawal.py:36
 msgid "fw menu {silver}"
 msgstr ""
 
-#: routers/withdrawal.py:39
+#: routers/withdrawal.py:42
 msgid "to wd"
 msgstr ""
 
-#: routers/withdrawal.py:44 routers/withdrawal.py:48
+#: routers/withdrawal.py:47 routers/withdrawal.py:51
 msgid "wd menu {silver}"
 msgstr ""
 
-#: routers/withdrawal.py:62
+#: routers/withdrawal.py:65
 msgid "fw available {silver}"
 msgstr ""
 
-#: routers/withdrawal.py:64
+#: routers/withdrawal.py:67
 msgid "request fw"
 msgstr ""
 
-#: routers/withdrawal.py:65 routers/withdrawal.py:70
+#: routers/withdrawal.py:68 routers/withdrawal.py:73
 msgid "to wd menu"
 msgstr ""
 
-#: routers/withdrawal.py:68
+#: routers/withdrawal.py:71
 msgid "not available fw {silver}"
 msgstr ""
 
-#: routers/withdrawal.py:76
+#: routers/withdrawal.py:79
 msgid ""
 "ask TON addr (WARNING: YOU MUST ENTER CORRECT DATA. IF MISTAKE OCCURED, "
 "CONTACT SUPPORT IMMEDIATELY!!!)"
 msgstr ""
 
-#: routers/withdrawal.py:78
+#: routers/withdrawal.py:81
 msgid "cancel fw"
 msgstr ""
 
-#: routers/withdrawal.py:99
+#: routers/withdrawal.py:102
 msgid "fw money will arrive in next 24h."
 msgstr ""
 
-#: routers/withdrawal.py:106
+#: routers/withdrawal.py:109
 msgid "request"
 msgstr ""
 
-#: routers/withdrawal.py:107
+#: routers/withdrawal.py:110
 msgid "gold"
 msgstr ""
 
-#: routers/withdrawal.py:108
+#: routers/withdrawal.py:111
 msgid "wd to menu"
 msgstr ""
 
-#: routers/withdrawal.py:110
+#: routers/withdrawal.py:113
 msgid "wd menu {silver} {gold} {available}"
 msgstr ""
 
-#: routers/withdrawal.py:137
+#: routers/withdrawal.py:140
 msgid "gold menu promt {gold}"
 msgstr ""
 
-#: routers/withdrawal.py:139
+#: routers/withdrawal.py:142
 msgid "gold details"
 msgstr ""
 
-#: routers/withdrawal.py:140
+#: routers/withdrawal.py:143
 msgid "to tasks"
 msgstr ""
 
-#: routers/withdrawal.py:141
+#: routers/withdrawal.py:144
 msgid "back from gold menu to wd menu"
 msgstr ""
 
-#: routers/withdrawal.py:146
+#: routers/withdrawal.py:149
 msgid "gold details promt, table, etc."
 msgstr ""
 
-#: routers/withdrawal.py:148
+#: routers/withdrawal.py:151
 msgid "back from gold details to gold menu"
 msgstr ""
 
-#: routers/withdrawal.py:154
+#: routers/withdrawal.py:157
 msgid "Currently there are NO tasks :("
 msgstr ""
 
-#: routers/withdrawal.py:165
+#: routers/withdrawal.py:168
 msgid "ask amount to wd. available: {available}"
 msgstr ""
 
-#: routers/withdrawal.py:167
+#: routers/withdrawal.py:170
 msgid "cancel wd"
 msgstr ""
 
-#: routers/withdrawal.py:199
+#: routers/withdrawal.py:203
 msgid "ask ton addr to wd"
 msgstr ""
 
-#: routers/withdrawal.py:216
+#: routers/withdrawal.py:220
 msgid "Withdrawal request sucess promt (manager, support, 24h, etc)"
 msgstr ""
 

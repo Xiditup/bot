@@ -7,17 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-06-21 12:31+0300\n"
+"POT-Creation-Date: 2024-06-23 00:47+0300\n"
 "PO-Revision-Date: 2024-06-21 16:45+0300\n"
 "Last-Translator: \n"
-"Language-Team: en <LL@li.org>\n"
 "Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.15.0\n"
-"X-Generator: Poedit 3.4.4\n"
 
 #: routers/account.py:18
 msgid "share my link"
@@ -31,7 +30,7 @@ msgstr "<b>SHARE THIS:</b> {link}"
 msgid "top up balance"
 msgstr "Buy silver🪙"
 
-#: routers/account.py:22 routers/birds.py:37 routers/info.py:13
+#: routers/account.py:22 routers/birds.py:40 routers/info.py:19
 msgid "btn back to main"
 msgstr "🏠 Main menu"
 
@@ -94,9 +93,9 @@ msgstr "Pay✅"
 
 #: routers/account.py:72
 msgid "cancel invoice"
-msgstr "Cancel❌"
+msgstr "cancel❌"
 
-#: routers/birds.py:14
+#: routers/birds.py:17
 msgid "birds menu {eggs}"
 msgstr ""
 "This is your farm\n"
@@ -105,41 +104,39 @@ msgstr ""
 "\n"
 "Choose a bird color to learn more and buy\n"
 "\n"
-
 "*Press «Collect» to collect eggs and convert them to silver\n"
 "\n"
-
 "Birds info:"
 
-#: routers/birds.py:16
+#: routers/birds.py:19
 msgid "bird 1 {amount} {balance}"
 msgstr "🔵 [{amount}] → {balance}🥚"
 
-#: routers/birds.py:20
+#: routers/birds.py:23
 msgid "bird 2 {amount} {balance}"
 msgstr "🟢 [{amount}] → {balance}🥚"
 
-#: routers/birds.py:24
+#: routers/birds.py:27
 msgid "bird 3 {amount} {balance}"
 msgstr "🟡 [{amount}] → {balance}🥚"
 
-#: routers/birds.py:28
+#: routers/birds.py:31
 msgid "bird 4 {amount} {balance}"
 msgstr "🟠 [{amount}] → {balance}🥚"
 
-#: routers/birds.py:32
+#: routers/birds.py:35
 msgid "bird 5 {amount} {balance}"
 msgstr "🔴 [{amount}] → {balance}🥚"
 
-#: routers/birds.py:36
+#: routers/birds.py:39
 msgid "collect"
 msgstr "Collect eggs 🥚→🪙"
 
-#: routers/birds.py:47
+#: routers/birds.py:50
 msgid "eggs collected"
 msgstr "Eggs collected!"
 
-#: routers/birds.py:53
+#: routers/birds.py:56
 msgid "bird 1 {amount}"
 msgstr ""
 "This is a Blue Bird.\n"
@@ -152,7 +149,7 @@ msgstr ""
 "\n"
 "You have: {amount}"
 
-#: routers/birds.py:54
+#: routers/birds.py:57
 msgid "bird 2 {amount}"
 msgstr ""
 "This is a Green Bird.\n"
@@ -165,7 +162,7 @@ msgstr ""
 "\n"
 "You have: {amount}"
 
-#: routers/birds.py:55
+#: routers/birds.py:58
 msgid "bird 3 {amount}"
 msgstr ""
 "This is a Yellow Bird.\n"
@@ -178,7 +175,7 @@ msgstr ""
 "\n"
 "You have: {amount}"
 
-#: routers/birds.py:56
+#: routers/birds.py:59
 msgid "bird 4 {amount}"
 msgstr ""
 "This is a Orange Bird.\n"
@@ -191,7 +188,7 @@ msgstr ""
 "\n"
 "You have: {amount}"
 
-#: routers/birds.py:57
+#: routers/birds.py:60
 msgid "bird 5 {amount}"
 msgstr ""
 "This is a Red Bird.\n"
@@ -204,61 +201,50 @@ msgstr ""
 "\n"
 "You have: {amount}"
 
-#: routers/birds.py:62
+#: routers/birds.py:65
 msgid "buy"
 msgstr "Buy🛒"
 
-#: routers/birds.py:63
+#: routers/birds.py:66
 msgid "btn back to birds"
 msgstr "⬅️ Back to farm"
 
-#: routers/birds.py:75
+#: routers/birds.py:78
 msgid "Buy success"
 msgstr "Purchased!"
 
-#: routers/birds.py:78
+#: routers/birds.py:81
 msgid "Insufficient balance"
 msgstr "Not enough silver :("
 
-#: routers/head.py:16
+#: routers/head.py:21
 msgid "btn info"
 msgstr "💬 Info"
 
-#: routers/head.py:17
+#: routers/head.py:22
 msgid "btn birds"
 msgstr "🪺 Your farm"
 
-#: routers/head.py:18
+#: routers/head.py:23
 msgid "btn account"
 msgstr "👤 Account"
 
-#: routers/head.py:19
+#: routers/head.py:24
 msgid "btn withdrawal"
 msgstr "💸 Withdrawal"
 
-#: routers/head.py:20
+#: routers/head.py:25
 msgid "btn support"
 msgstr "🤝 Support"
 
-#: routers/head.py:24
-msgid "welcome {name}"
-msgstr ""
-"Welcome, {name}!\n"
-"\n"
-"Game is very simple:\n"
-"-buy birds\n"
-"-collect eggs\n"
-"-repeat\n"
-"*and withdraw the money whenever you want😁"
-
-#: routers/head.py:29
+#: routers/head.py:41 routers/head.py:45
 msgid "main menu"
 msgstr ""
 "Main menu\n"
 "\n"
 "How many eggs will you collect today❓"
 
-#: routers/info.py:11
+#: routers/info.py:17
 msgid "info"
 msgstr ""
 "To buy birds and collect eggs press «your farm»\n"
@@ -269,33 +255,33 @@ msgstr ""
 "\n"
 "If you have any questions - «support»"
 
-#: routers/withdrawal.py:24
+#: routers/withdrawal.py:27
 msgid "to fw 0.1$"
 msgstr "WITHDRAW!"
 
-#: routers/withdrawal.py:25 routers/withdrawal.py:40
+#: routers/withdrawal.py:28 routers/withdrawal.py:43
 msgid "to main menu"
 msgstr "🏠 Main menu"
 
-#: routers/withdrawal.py:29 routers/withdrawal.py:33
+#: routers/withdrawal.py:32 routers/withdrawal.py:36
 msgid "fw menu {silver}"
 msgstr ""
 "You have {silver}🪙\n"
 "\n"
 "Exchange rate: 1000🪙 = 0.1$"
 
-#: routers/withdrawal.py:39
+#: routers/withdrawal.py:42
 msgid "to wd"
 msgstr "withdraw"
 
-#: routers/withdrawal.py:44 routers/withdrawal.py:48
+#: routers/withdrawal.py:47 routers/withdrawal.py:51
 msgid "wd menu {silver}"
 msgstr ""
 "You have {silver}🪙\n"
 "\n"
 "Exchange rate: 1000🪙 = 0.1$"
 
-#: routers/withdrawal.py:62
+#: routers/withdrawal.py:65
 msgid "fw available {silver}"
 msgstr ""
 "✅Withdraw available\n"
@@ -304,15 +290,15 @@ msgstr ""
 "\n"
 "Go forward to get your 0.1$!"
 
-#: routers/withdrawal.py:64
+#: routers/withdrawal.py:67
 msgid "request fw"
 msgstr "Request withdrawal🙋‍♂️"
 
-#: routers/withdrawal.py:65 routers/withdrawal.py:70
+#: routers/withdrawal.py:68 routers/withdrawal.py:73
 msgid "to wd menu"
 msgstr "⬅️ back"
 
-#: routers/withdrawal.py:68
+#: routers/withdrawal.py:71
 msgid "not available fw {silver}"
 msgstr ""
 "❌ Withdraw not available\n"
@@ -321,7 +307,7 @@ msgstr ""
 "\n"
 "Make more and come back!"
 
-#: routers/withdrawal.py:76
+#: routers/withdrawal.py:79
 msgid ""
 "ask TON addr (WARNING: YOU MUST ENTER CORRECT DATA. IF MISTAKE OCCURED, "
 "CONTACT SUPPORT IMMEDIATELY!!!)"
@@ -333,11 +319,11 @@ msgstr ""
 "\n"
 "If any mistake occurred, contact support IMMEDIATELY!"
 
-#: routers/withdrawal.py:78
+#: routers/withdrawal.py:81
 msgid "cancel fw"
 msgstr "Cancel withdrawal❌"
 
-#: routers/withdrawal.py:99
+#: routers/withdrawal.py:102
 msgid "fw money will arrive in next 24h."
 msgstr ""
 "Great!\n"
@@ -346,19 +332,19 @@ msgstr ""
 "\n"
 "Now it is the time to scale up your farm!"
 
-#: routers/withdrawal.py:106
+#: routers/withdrawal.py:109
 msgid "request"
 msgstr "Proceed"
 
-#: routers/withdrawal.py:107
+#: routers/withdrawal.py:110
 msgid "gold"
 msgstr "Gold coins🏆"
 
-#: routers/withdrawal.py:108
+#: routers/withdrawal.py:111
 msgid "wd to menu"
 msgstr "⬅️ back"
 
-#: routers/withdrawal.py:110
+#: routers/withdrawal.py:113
 msgid "wd menu {silver} {gold} {available}"
 msgstr ""
 "Your balances:\n"
@@ -369,7 +355,7 @@ msgstr ""
 "\n"
 "Available to withdraw: {available}$"
 
-#: routers/withdrawal.py:137
+#: routers/withdrawal.py:140
 msgid "gold menu promt {gold}"
 msgstr ""
 "You have {gold}🏆\n"
@@ -383,19 +369,19 @@ msgstr ""
 "\n"
 "*click «details» to learn more"
 
-#: routers/withdrawal.py:139
+#: routers/withdrawal.py:142
 msgid "gold details"
 msgstr "Details"
 
-#: routers/withdrawal.py:140
+#: routers/withdrawal.py:143
 msgid "to tasks"
 msgstr "Tasks"
 
-#: routers/withdrawal.py:141
+#: routers/withdrawal.py:144
 msgid "back from gold menu to wd menu"
 msgstr "⬅️ back"
 
-#: routers/withdrawal.py:146
+#: routers/withdrawal.py:149
 msgid "gold details promt, table, etc."
 msgstr ""
 "1🏆 equals 0.01$\n"
@@ -414,23 +400,23 @@ msgstr ""
 "\n"
 "Get your invite-link in «account» menu!"
 
-#: routers/withdrawal.py:148
+#: routers/withdrawal.py:151
 msgid "back from gold details to gold menu"
 msgstr "⬅️ back"
 
-#: routers/withdrawal.py:154
+#: routers/withdrawal.py:157
 msgid "Currently there are NO tasks :("
 msgstr "There are no tasks at this time :\\"
 
-#: routers/withdrawal.py:165
+#: routers/withdrawal.py:168
 msgid "ask amount to wd. available: {available}"
 msgstr "Input withdrawal amount (of {available}):"
 
-#: routers/withdrawal.py:167
+#: routers/withdrawal.py:170
 msgid "cancel wd"
 msgstr "Cancel withdrawal❌"
 
-#: routers/withdrawal.py:199
+#: routers/withdrawal.py:203
 msgid "ask ton addr to wd"
 msgstr ""
 "Enter your TON-coin wallet address.\n"
@@ -440,9 +426,20 @@ msgstr ""
 "\n"
 "If any mistake occurred, contact support IMMEDIATELY!"
 
-#: routers/withdrawal.py:216
+#: routers/withdrawal.py:220
 msgid "Withdrawal request sucess promt (manager, support, 24h, etc)"
 msgstr ""
 "Great!\n"
 "\n"
 "Money will arrive in next 24 hours!"
+
+#~ msgid "welcome {name}"
+#~ msgstr ""
+#~ "Welcome, {name}!\n"
+#~ "\n"
+#~ "Game is very simple:\n"
+#~ "-buy birds\n"
+#~ "-collect eggs\n"
+#~ "-repeat\n"
+#~ "*and withdraw the money whenever you want😁"
+
